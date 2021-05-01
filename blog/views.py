@@ -12,6 +12,6 @@ def post_detail(request, year, month, day, post):
         status="published", 
         publish__year=year, 
         publish__month=month, 
-        publish__day=day
+        # publish__day=day TODO Está retornando o dia posterior a postagem
     )
     return render(request, 'blog/post/detail.html', {'post': post})
